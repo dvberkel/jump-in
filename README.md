@@ -1,2 +1,5 @@
-# jump-in
-Exploring the Spring Framework
+Jump In
+=======
+
+Exploring the Spring Framework.
+
