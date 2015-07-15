@@ -3,11 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="answer-provider" class="nl.dvberkel.demo.AnswerProvider">
+    <bean id="answer-provider" class="nl.dvberkel.demo.xml.AnswerProvider">
         <constructor-arg type="int" value="42"/>
     </bean>
 
-    <bean id="deep-thought" class="nl.dvberkel.demo.DeepThought">
+    <bean id="deep-thought" class="nl.dvberkel.demo.xml.DeepThought">
         <property name="answerProvider" ref="answer-provider"/>
     </bean>
 

@@ -1,5 +1,6 @@
 package nl.dvberkel.demo;
 
+import nl.dvberkel.demo.xml.DeepThought;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

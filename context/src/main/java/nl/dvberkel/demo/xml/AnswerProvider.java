@@ -1,4 +1,4 @@
-package nl.dvberkel.demo;
+package nl.dvberkel.demo.xml;
 
 public class AnswerProvider {
     private final int answer;
