@@ -9,6 +9,7 @@
 
   <modules>
     <module>core</module>
+    <module>beans</module>
   </modules>
 
   <properties>
