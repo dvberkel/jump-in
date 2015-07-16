@@ -29,4 +29,12 @@ public class XmlApplicationContextTest {
         assertThat(context.getBean(DeepThought.class).provideAnswer(), is(42));
         assertThat(context.getBean(FortuneTeller.class).fortune(), is("you will win the lottery"));
     }
+
+    @Test
+    public void shouldBeAbleToConfigureAnApplicationContextFromXmlThatImportsOthers() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("test.xml.imported.application-context.xml");
+
+        assertThat(context.getBean(DeepThought.class).provideAnswer(), is(42));
+        assertThat(context.getBean(FortuneTeller.class).fortune(), is("you will win the lottery"));
+    }
 }
