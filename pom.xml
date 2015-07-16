@@ -8,7 +8,6 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>beans</module>
     <module>context</module>
     <module>context-support</module>
     <module>expression</module>
