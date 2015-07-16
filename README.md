@@ -13,8 +13,9 @@ Spring Framework provides is shown below.
 
 ### Core Container
 
-#### Core
+#### Core & Beans
 
-The `core` module is a utility module that the other modules depend on. As such it has little independent value.
+The `core` and `beans` modules are utility modules that other modules depend on. As such they have little independent
+value.
 
 [docs]: http://spring.io/docs
