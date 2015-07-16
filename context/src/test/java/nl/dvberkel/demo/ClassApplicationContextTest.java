@@ -17,4 +17,15 @@ public class ClassApplicationContextTest {
 
         assertThat(computer.provideAnswer(), is(42));
     }
+
+    @Test
+    public void shouldBeAbleToConfigureAnApplicationContextFromConfigurationClassFoundByScanning() {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.scan("nl.dvberkel.demo.configuration");
+        context.refresh();
+
+        DeepThought computer = context.getBean(DeepThought.class);
+
+        assertThat(computer.provideAnswer(), is(42));
+    }
 }
