@@ -1,9 +1,8 @@
 package nl.dvberkel.demo;
 
-import nl.dvberkel.demo.configuration.ApplicationConfiguration;
+import nl.dvberkel.demo.annotation.*;
+import nl.dvberkel.demo.configuration.*;
 import nl.dvberkel.demo.configuration.DeepThought;
-import nl.dvberkel.demo.configuration.FortuneTeller;
-import nl.dvberkel.demo.configuration.ImportedConfiguration;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -36,5 +35,14 @@ public class ClassApplicationContextTest {
 
         assertThat(context.getBean(DeepThought.class).provideAnswer(), is(42));
         assertThat(context.getBean(FortuneTeller.class).fortune(), is("you will win the lottery"));
+    }
+
+    @Test
+    public void shouldBeAbleToConfigureAnApplicationContextFromConfigurationClassFoundByScanningForComponents() {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ScanningConfiguration.class);
+
+        nl.dvberkel.demo.annotation.DeepThought computer = context.getBean(nl.dvberkel.demo.annotation.DeepThought.class);
+
+        assertThat(computer.provideAnswer(), is(42));
     }
 }
